@@ -1,0 +1,19 @@
+[33mcommit b1c9495fd58148d25017c23e13a4671f90249c41[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: VladikNV250 <vladiknemichev@gmail.com>
+Date:   Mon Nov 4 23:11:00 2024 +0200
+
+    Revert "init"
+    
+    This reverts commit 50e9123e5627768fe22c3b577ca6ac4c05f68aa4.
+
+[33mcommit 977628edda78b3ab84e01d91a5204a2410e7f313[m[33m ([m[1;32mmain[m[33m)[m
+Author: VladikNV250 <vladiknemichev@gmail.com>
+Date:   Mon Nov 4 23:00:56 2024 +0200
+
+    init
+
+[33mcommit 50e9123e5627768fe22c3b577ca6ac4c05f68aa4[m
+Author: VladikNV250 <vladiknemichev@gmail.com>
+Date:   Mon Nov 4 22:52:58 2024 +0200
+
+    init
