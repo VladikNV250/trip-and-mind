@@ -1,0 +1,7 @@
+@use "@/scss/utils" as *;
+
+.icon-link-list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}

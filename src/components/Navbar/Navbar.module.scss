@@ -1,0 +1,46 @@
+@use "@/scss/utils" as *;
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        aspect-ratio: 160 / 35;
+        max-width: 100%;
+    }
+}
+
+.link-list {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: toRem(30);
+    @include smoothAnimation(1000ms);
+
+    .link {
+        color: #fff;
+        font-weight: 500;
+        font-size: toRem(28);
+        &:hover {
+            color: tone(#fff, 1, down);
+        }
+    }
+
+    @media (min-width: toRem($tabletScreenWidth)) {
+        gap: toRem(48);
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        flex-direction: row;
+
+        .link {
+            font-size: toRem(15);
+        }
+    }
+}

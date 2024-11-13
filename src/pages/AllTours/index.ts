@@ -1,0 +1,1 @@
+export {LazyAllTours as AllTours} from "./AllTours.lazy";

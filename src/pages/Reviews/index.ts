@@ -1,0 +1,1 @@
+export {LazyReviews as Reviews} from "./Reviews.lazy";

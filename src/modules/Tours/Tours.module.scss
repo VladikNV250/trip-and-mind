@@ -1,0 +1,32 @@
+@use "@/scss/utils" as *;
+
+.tours {
+    width: 100%;
+
+    .container {
+        max-width: toRem(1378);
+        display: flex;
+        @include adaptiveValue(gap, 100, 20);  
+        @include adaptiveValue(padding-left, 260, 15);
+        @include adaptiveValue(padding-right, 200, 15);
+        @include adaptiveValue(padding-top, 160, 60);
+        @include adaptiveValue(padding-bottom, 160, 60);
+        @media (max-width: toRem(1024)) {
+            flex-direction: column;
+        }
+    }
+
+    &-title {
+        margin-bottom: toRem(30);
+        max-width: toRem(400);
+    }
+
+    &-subtitle {
+        margin-bottom: toRem(50);
+        max-width: toRem(448);
+    }
+
+    .content {
+        padding-top: toRem(35);
+    }
+}

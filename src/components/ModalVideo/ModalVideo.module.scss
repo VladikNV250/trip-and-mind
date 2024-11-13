@@ -1,0 +1,48 @@
+@use "@/scss/utils" as *;
+
+.modal {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    .video {
+        transform: translateY(toRem(20));
+        opacity: 0;
+    }
+    
+    &-open {
+        transition-property: opacity, color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+        opacity: 1;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0 toRem(15);
+        background: rgba($color: #000000, $alpha: 0.5);
+        color: white;
+
+        .video {
+            transition-property: transform, opacity, color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 400ms;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    max-width: toRem(700);
+    max-height: toRem(400);
+    aspect-ratio: 700 / 400;
+    border-radius: toRem(12);
+    background-color: #686868;
+}

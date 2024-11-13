@@ -1,0 +1,45 @@
+{
+    "message-success": "Заявка отправлена",
+    "message-error_in_input": "Ошибка в поле ввода ",
+    "message-target-name": "имени",
+    "message-target-tel": "телефона",
+
+    "form-input-name__placeholder": "Ваше имя",
+    "form-input-tel__placeholder": "+7 (___)___-__-__",
+    "form-submit": "Отправить заявку",
+    "form-agreement": "Нажимая на кнопку, вы даёте согласие на ",
+    "form-agreement-link-text": "обработку персональных данных",
+    
+    "route-all-tours": "Все туры",
+    "route-reviews": "Отзывы",
+    "route-contacts": "Контакты",
+
+    "card_list-waterfall": "Водопады Исландии",
+    "card_list-dolomits": "Сказочные Доломиты",
+    "card_list-norway": "Неизведанная Норвегия",
+    
+    "hero-title": "Открой для себя Новую Ирландию",
+    "hero-subtitle": "Авторские туры по экзотическим уголкам от Ивана Золо",
+    "hero-leave_application": "Оставить заявку",
+    "hero-video-text": "Посмотрите видео-отчет 2018-2019",
+    "hero-subscribe-to-us": "Подписывайтесь в соцсетях",
+    
+    "tours-title": "Посмотрите все направления туров",
+    "tours-subtitle": "Берега океанов и дикие пляжи с редкими породами\n деревьев. Местная архитектура и первозданный вид дикой природы",
+    "tours-card-subtitle": "апрель",
+    "tours-card-text": "Большое ущелье\n на острове Гавайи",
+    "tours-see_all": "Смотреть все",
+    
+    "application-title": "Оставьте заявку на бесплатную консультацию",
+    "application-subtitle": "Мы перезвоним вам в ближайшее время",
+    
+    "review-title": "Что пишут участники наших путишествий",
+    "review-subtitle": "87% участников приходят по личной рекомендации от\n друзей. А каждый 4-ый путешествует с нами больше двух раз!",
+    "review-read-reviews": "Читать отзывы",
+    "review-card-title": "Отзыв",
+    "review-card-subtitle": "Елена Иванова",
+    "review-card-text": "&nbsp;&nbsp;Пожалуй, это был самый лучший отпуск в моей жизни…",
+    
+    "politics": "Политика конфиденциальности",
+    "agreement": "Соглашение на обработку персональных данных"
+}

@@ -1,0 +1,18 @@
+@use "@/scss/utils" as *;
+
+.button {
+    width: toRem(73);
+    height: toRem(73);
+    border-radius: 50%;
+    opacity: 0.75;
+    background: transparent;
+    border: toRem(2) solid rgba(255, 255, 255, 0.75);
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+        margin-left: toRem(2);
+    }
+}

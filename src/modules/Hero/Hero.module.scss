@@ -1,0 +1,85 @@
+@use "@/scss/utils" as *;
+
+.hero {
+    width: 100%;
+    background: url("@/assets/hero/hero-background.png");
+    background-size: cover;
+
+    .container {
+        max-width: toRem(1680);
+        @include adaptiveValue(padding, 120, 15);
+        @include nest-to-avoid-collision {
+            padding-top: toRem(40);
+            padding-bottom: toRem(70);
+        }
+        @media (min-width: toRem(1920)) {
+            margin: 0 auto;
+        }
+    }
+
+    &-title { 
+        color: #fff;
+        max-width: toRem(830);
+        @include adaptiveValue(margin-bottom, 50, 25, $tabletScreenWidth) 
+    }
+    &-subtitle { 
+        color: #fff;
+        max-width: toRem(547);
+        @include adaptiveValue(margin-bottom, 70, 35, $tabletScreenWidth) 
+    }
+
+    .content__one {
+        margin-top: toRem(145);
+        
+        .button-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            @include adaptiveValue(gap, 60, 30, $tabletScreenWidth);
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            gap: toRem(20);
+
+            .play-text {
+                max-width: toRem(104);
+                font-size: toRem(16);
+                font-weight: 500;
+                line-height: 1.62; /* 26/16 */
+                color: #A1A8B6;
+            }
+        }
+    }
+
+    .content__two {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: toRem(5);
+        @media (max-width: toRem(1800)) {
+            margin-top: toRem(50);
+        }
+        @media (max-width: toRem(1440)) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: toRem(30);
+        }
+
+        .link-container {
+            margin-bottom: toRem(30);
+            @media (max-width: toRem(1440)) {
+                order: 1;
+                margin-bottom: 0;
+            }
+        }
+
+        .links-text {
+            font-size: toRem(14);
+            letter-spacing: 0.01em;
+            color: #fff;
+            margin-bottom: toRem(19);
+        }
+    }
+}

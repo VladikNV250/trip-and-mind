@@ -1,0 +1,45 @@
+{
+    "message-success": "Application is sent",
+    "message-error_in_input": "Error in input ",
+    "message-target-name": "name",
+    "message-target-tel": "telephone",
+
+    "form-input-name__placeholder": "Your name",
+    "form-input-tel__placeholder": "+1 (___)___-__-__",
+    "form-submit": "Send application",
+    "form-agreement": "By clicking on the button, you consent to ",
+    "form-agreement-link-text": "the processing of personal data",
+    
+    "route-all-tours": "All tours",
+    "route-reviews": "Reviews",
+    "route-contacts": "Contacts",
+
+    "card_list-waterfall": "Waterfalls of Iceland",
+    "card_list-dolomits": "Fabulous Dolomites",
+    "card_list-norway": "Undiscovered Norway",
+    
+    "hero-title": "Discover New Ireland for yourself",
+    "hero-subtitle": "Author's tours to exotic places from Ivan Zolo",
+    "hero-leave_application": "Leave an application",
+    "hero-video-text": "Check out the 2018-2019 video report",
+    "hero-subscribe-to-us": "Subscribe on social networks",
+    
+    "tours-title": "See all tour destinations",
+    "tours-subtitle": "Ocean shores and wild beaches with rare\n tree species. Local architecture and pristine wilderness views",
+    "tours-card-subtitle": "April",
+    "tours-card-text": "The Grand Canyon on\n the island of Hawaii",
+    "tours-see_all": "See all",
+    
+    "application-title": "Leave an application for a free consultation",
+    "application-subtitle": "We'll get back to you as soon as possible",
+    
+    "review-title": "What our travellers write",
+    "review-subtitle": "87% of participants come on a personal recommendation from\n friends. And every 4th person has travelled with us more than twice!",
+    "review-read-reviews": "Read reviews",
+    "review-card-title": "Review",
+    "review-card-subtitle": "Elena Ivanova",
+    "review-card-text": "&nbsp;&nbsp;It was probably the best holiday of my life…",
+    
+    "politics": "Privacy Policy",
+    "agreement": "Agreement on personal data processing"
+}

@@ -1,0 +1,17 @@
+@use "@/scss/utils" as *;
+
+.input {
+    width: toRem(283);
+    height: toRem(75);
+    border-radius: toRem(38);
+    padding: toRem(25) toRem(20);
+    background: #FAFAFA;
+    box-sizing: border-box;
+    border: toRem(2) solid #CED8DF;
+    font-weight: 500;
+    font-size: toRem(20);
+
+    &::placeholder {
+        color: #B7C3CC;
+    }
+}

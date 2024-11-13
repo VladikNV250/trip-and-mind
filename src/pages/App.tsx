@@ -1,14 +1,12 @@
-import { Link, Outlet } from "react-router-dom";
-import MyButton from "@/components/MyButton";
-import * as style from "./app.module.scss"
+import { Outlet } from "react-router-dom";
+import "./global.scss";
+import Footer from "@/components/Footer/Footer";
 
 export default function App() {
   return (
-    <div className={style.main}>
-        <Link to="/about">About</Link>
-        <Link to="/">Home</Link>
-        <MyButton />
+    <>
         <Outlet />
-    </div>
+        <Footer />
+    </>
   )
 }

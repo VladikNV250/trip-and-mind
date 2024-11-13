@@ -1,0 +1,36 @@
+@use "@/scss/utils" as *;
+
+.button {
+    height: toRem(75);
+    font-family: "Montserrat";
+    font-weight: 600;
+    // font-size: toRem(20);
+    text-align: center;
+    border-radius: toRem(38);
+    background: transparent;
+    border: toRem(2) solid $primary-color;
+    color: $primary-color;
+    transition-property: transform, color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+
+    @include adaptiveValue(font-size, 20, 18, 600);
+    @media (min-width: toRem(320)) {
+        width: 100%;        
+    }
+    @media (min-width: toRem(600)) {
+        width: toRem(275);
+    }
+
+    &:hover {
+        background: tone($primary-color, 1, down);
+        border: toRem(2) solid tone($primary-color, 1, down);
+        color: #000;        
+    }
+
+    &:active {
+        transform: translateY(toRem(5));
+        background: tone($primary-color, 2, down);
+        border: toRem(2) solid tone($primary-color, 2, down);
+    }
+}

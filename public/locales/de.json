@@ -1,0 +1,45 @@
+{
+    "message-success": "Antrag wird versandt",
+    "message-error_in_input": "Fehler im Eingabe",
+    "message-target-name": "namen",
+    "message-target-tel": "telefon",
+
+    "form-input-name__placeholder": "Dein namen",
+    "form-input-tel__placeholder": "+49 (___)___-__-__",
+    "form-submit": "Bewerbung abschicken",
+    "form-agreement": "Durch Anklicken der Schaltfläche erklären Sie sich mit  ",
+    "form-agreement-link-text": "der Verarbeitung personenbezogener Daten einverstanden",
+    
+    "route-all-tours": "Alle touren",
+    "route-reviews": "Bewertungen",
+    "route-contacts": "Kontakte",
+
+    "card_list-waterfall": "Wasserfälle in Island",
+    "card_list-dolomits": "Fabelhafte Dolomiten",
+    "card_list-norway": "Unentdecktes Norwegen",
+    
+    "hero-title": "Entdecken Sie New Ireland für sich selbst",
+    "hero-subtitle": "Reisen des Autors zu exotischen Orten von Ivan Zolo",
+    "hero-leave_application": "Eine Bewerbung hinterlassen",
+    "hero-video-text": "Sehen Sie sich den Videobericht 2018-2019 an",
+    "hero-subscribe-to-us": "In sozialen Netzwerken abonnieren",
+    
+    "tours-title": "Alle Reiseziele anzeigen",
+    "tours-subtitle": "Meeresküsten und wilde Strände mit seltenen\n Baumarten. Lokale Architektur und unberührte Wildnis",
+    "tours-card-subtitle": "April",
+    "tours-card-text": "Der Grand Canyon \n auf der Insel Hawaii",
+    "tours-see_all": "Alle sehen",
+    
+    "application-title": "Hinterlassen Sie eine Bewerbung für eine kostenlose Beratung",
+    "application-subtitle": "Wir werden uns so schnell wie möglich bei Ihnen melden.",
+    
+    "review-title": "Was unsere Reisenden schreiben",
+    "review-subtitle": "87% der Teilnehmer kommen aufgrund einer persönlichen Empfehlung von\n Freunden. Und jede 4. Person ist mehr als zweimal mit uns gereist!",
+    "review-read-reviews": "Bewertungen lesen",
+    "review-card-title": "Bewertung",
+    "review-card-subtitle": "Elena Iwanowa",
+    "review-card-text": "&nbsp;&nbsp;Es war wahrscheinlich der beste Urlaub meines Lebens…",
+    
+    "politics": "Datenschutzbestimmungen",
+    "agreement": "Abkommen über die Verarbeitung personenbezogener Daten"
+}

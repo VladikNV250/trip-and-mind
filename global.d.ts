@@ -5,10 +5,9 @@ declare module '*.module.scss' {
     const classNames: IClassNames;
     export = classNames;
 }
-// declare module '*.module.css';
 
-// declare module ""
 declare module "*.jpg";
+declare module "*.mp4";
 declare module "*.jpeg";
 declare module "*.png";
 declare module "*.gif";

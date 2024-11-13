@@ -1,0 +1,58 @@
+@use "@/scss/utils" as *;
+
+.footer {
+    min-height: toRem(180);
+    background-color: #F8F8F8;
+
+    .container {
+        min-height: toRem(180);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: toRem(20);
+        @include adaptiveValue(padding, 120, 15);
+        @include nest-to-avoid-collision {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        @media (max-width: toRem(1024)) {
+            padding-top: toRem(50);
+            padding-bottom: toRem(20);
+        }
+    }
+
+    .content {
+        display: flex;
+        @include adaptiveValue(gap, 123, 20);
+        @media (max-width: toRem(1024)) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .logo {
+        align-self: flex-start;
+        @media (min-width: toRem(1024)) {
+            align-self: flex-end;         
+            margin-top: toRem(4);
+        }
+    }
+
+    .link {
+        align-self: center;
+        color: #90A4B2;
+        font-size: toRem(14);
+        font-weight: 500;
+        line-height: 1.42; /* 20/14 */
+        @media (min-width: toRem(1024)) {
+            align-self: flex-start;
+        }
+
+        &-politics { max-width: toRem(163); }
+        &-agreement { max-width: toRem(195); }
+        &-list--wrapper { margin-top: toRem(20); }
+    }
+
+
+}

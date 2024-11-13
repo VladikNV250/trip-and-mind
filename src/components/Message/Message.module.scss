@@ -1,0 +1,33 @@
+@use "@/scss/utils" as *;
+
+.message {
+    position: fixed;
+    left: 50%;
+    top: toRem(40);
+    transform: translate(-50%, toRem(-20));
+    max-width: toRem(300);
+    padding: toRem(15) toRem(40);
+    border-radius: toRem(16);
+    border: 2px solid $primary-color;
+    font-size: toRem(18);
+    font-weight: 500;
+    color: $primary-color;
+    opacity: 0;
+    @include smoothAnimation();
+
+    &-success {
+        @extend .message;
+        opacity: 1;
+        transform: translate(-50%, 0);
+        background: #e7ffdd;
+        outline: 2px solid #e7ffdd;
+    }
+
+    &-error {
+        @extend .message;
+        opacity: 1;
+        transform: translate(-50%, 0);
+        background: #ffdddd;
+        outline: 2px solid #ffdddd;
+    }
+}

@@ -1,0 +1,75 @@
+@use "sass:color";
+$primary-color: #DD9428;
+$text-color: #331111;
+$maxScreenWidth: 1920;
+$mobileScreenWidth: 320;
+$tabletScreenWidth: 768;
+
+@function toRem($px) {
+    @return calc($px / 16) + rem,
+}
+
+@function tone($color, $tone: 1, $dir: up) {
+    $adjust: none; 
+    @if ($dir == up) { 
+        $adjust: $tone * 16;
+    } @else {
+        $adjust: $tone * -16;
+    }
+    @return color.adjust( 
+        $color,  
+        $red: $adjust,  
+        $green: $adjust,  
+        $blue: $adjust 
+    ); 
+}
+
+// @mixin adaptiveValue($property, $startSize, $minSize, $type, $maxWidthContainer) {
+//     $addSize: $startSize - $minSize;
+//     @if type == 1 {
+//         // if less than container
+//         #{$property}: toRem($startSize);
+//         @media (max-width: #{toRem($maxWidthContainer)}) {
+//             #{$property}: calc(#{toRem($minSize)} + #{$addSize} * ((#{100vw - $mobileScreenWidth}) / ($maxWidthContainer - $mobileScreenWidth)))
+//         }
+//     } @else if type == 2 {
+//         // if bigger than container
+//         #{$property}: toRem($startSize);
+//         @media (max-width: #{toRem($maxWidthContainer)}) {
+//             #{$property}: calc(#{toRem($minSize)} + #{$addSize} * ((#{100vw - $mobileScreenWidth}) / ($maxScreenWidth - $mobileScreenWidth)))
+//         }
+//     } @else {
+//         #{$property}: calc(#{toRem($minSize)} + #{$addSize} * ((#{100vw - $mobileScreenWidth}) / ($maxScreenWidth - $mobileScreenWidth)))
+//     }
+// }
+
+@mixin nest-to-avoid-collision {
+    & {
+        @content
+    }
+}
+
+@mixin adaptiveValue($property, $startSize, $minSize, $from: $maxScreenWidth, $to: $mobileScreenWidth) {
+    @include nest-to-avoid-collision {
+        $addSize: $startSize - $minSize;
+        @if $from == $maxScreenWidth {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$to + px}) / #{$from - $to}))
+        } @else {
+            #{$property}: toRem($startSize);
+            @media (max-width: #{toRem($from)}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$to + px}) / #{$from - $to}))
+            }   
+        }
+        @if $to != $mobileScreenWidth {
+            @media (max-width: toRem($to)) {
+                #{$property}: toRem($minSize);
+            }
+        }
+    }
+}
+
+@mixin smoothAnimation($duration: 200ms) {
+    transition-property: opacity, top, transform, color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: $duration;
+}

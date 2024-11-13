@@ -1,0 +1,45 @@
+{
+    "message-success": "Заявка відправлена",
+    "message-error_in_input": "Помилка в полі вводу ",
+    "message-target-name": "імені",
+    "message-target-tel": "телефону",
+
+    "form-input-name__placeholder": "Ваше ім'я",
+    "form-input-tel__placeholder": "+380XXXXXXXXX",
+    "form-submit": "Відправити заявку",
+    "form-agreement": "Натискаючи на кнопку, ви даєте згоду на ",
+    "form-agreement-link-text": "обробку персональних даних",
+    
+    "route-all-tours": "Усі тури",
+    "route-reviews": "Відгуки",
+    "route-contacts": "Контакти",
+
+    "card_list-waterfall": "Водоспади Ісландії",
+    "card_list-dolomits": "Казкові Доломіти",
+    "card_list-norway": "Невідкрита Норвегія",
+    
+    "hero-title": "Відкрий для себе Нову Ірландію",
+    "hero-subtitle": "Авторські тури по екзотичним куточкам від Івана Золо",
+    "hero-leave_application": "Залишити заявку",
+    "hero-video-text": "Подивіться відео-звіт 2018-2019",
+    "hero-subscribe-to-us": "Підписуйтесь в соцмережах",
+    
+    "tours-title": "Подивіться всі напрямки турів",
+    "tours-subtitle": "Береги океанів і дикі пляжі з рідкисними породами\n дерев. Місцева архітектура і первозданний вид дикої природи",
+    "tours-card-subtitle": "квітень",
+    "tours-card-text": "Великий каньйон\n на острові Гаваї",
+    "tours-see_all": "Дивитись усе",
+    
+    "application-title": "Залиште заявку на безкоштовну консультацію",
+    "application-subtitle": "Ми передзвонимо вам найближчим часом",
+    
+    "review-title": "Що пишуть учасники наших мандрівок",
+    "review-subtitle": "87% учасників приходять через особисту рекомендацію від\n друзів. А кожен 4-ий мандрує з нами більше двох разів!",
+    "review-read-reviews": "Читати відгуки",
+    "review-card-title": "Відгук",
+    "review-card-subtitle": "Єлєна Іванова",
+    "review-card-text": "&nbsp;&nbsp;Мабуть, це була найкраща відпустка в моєму житті…",
+    
+    "politics": "Політика конфіденційності",
+    "agreement": "Згода на обробку персональних даних"
+}

@@ -2,8 +2,21 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { buildOptions } from "./types/types";
 import { css, ModuleOptions } from "webpack";
 
-export function buildLoaders({mode}: buildOptions): ModuleOptions["rules"] {
+export function buildLoaders({mode, paths}: buildOptions): ModuleOptions["rules"] {
     const isDev = mode === "development";
+
+    const videoLoader = {
+        test: /\.mp4$/,
+        use: [
+            {
+                loader: "file-loader",
+                options: {
+                    name: "[name].[ext]",
+                    outputPath: "video"
+                }
+            }
+        ]
+    }
 
     const imageLoader = {
         test: /\.(png|jpg|jpeg|gif)$/i,
@@ -37,18 +50,29 @@ export function buildLoaders({mode}: buildOptions): ModuleOptions["rules"] {
         loader: "css-loader",
         options: {
           modules: {
+            namedExport: false,
+            exportLocalsConvention: 'as-is',
             localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:8]",
           },
         },
     }
 
-    const scssLoader = {
-        test: /\.s[ac]ss$/i,
+    const scssLoaderWithModules = {
+        test: /\.module\.s[ac]ss$/i,
         use: [
             isDev ? "style-loader" : MiniCssExtractPlugin.loader,
             cssLoader,
             "sass-loader",
         ],
+    }
+    const scssLoaderNoModules = {
+        test: /\.s[ac]ss$/i,
+        exclude: /\.module\.s[ac]ss$/i,
+        use: [
+            isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+            "css-loader",
+            "sass-loader"
+        ]
     }
 
     const tsLoader = {
@@ -66,8 +90,10 @@ export function buildLoaders({mode}: buildOptions): ModuleOptions["rules"] {
 
     return [
         imageLoader,
+        videoLoader,
         svgrLoader,
-        scssLoader,
+        scssLoaderWithModules,
+        scssLoaderNoModules,
         tsLoader,
     ]
 }

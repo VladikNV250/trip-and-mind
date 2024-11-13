@@ -1,0 +1,31 @@
+@use "@/scss/utils" as *;
+
+.button {
+    width: toRem(335);
+    height: toRem(75);
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: toRem(20);
+    border-radius: toRem(38);
+    border: toRem(2) solid transparent;
+    background: $primary-color;
+    color: $text-color;
+    transition-property: transform, color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    @media (max-width: toRem(400)) {
+        width: 100%;
+    }
+    // padding: toRem(25) toRem(80); глянути ФпЖ як він би зробив адаптив для кнопки
+
+    &:hover {
+        background: tone($primary-color, 1, down);
+    }
+
+    &:active {
+        background: tone($primary-color, 2, down);
+        transform: translateY(toRem(5));
+    }
+
+    
+}

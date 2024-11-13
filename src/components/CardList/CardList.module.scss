@@ -1,0 +1,21 @@
+@use "@/scss/utils" as *;
+
+.card-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (min-width: toRem($mobileScreenWidth)) {
+        flex-direction: column; 
+        width: 100%; 
+    }
+    @media (min-width: toRem(460)) {
+        align-items: flex-start;
+    }
+    @media (min-width: toRem($tabletScreenWidth)) {
+        align-items: center;
+        flex-direction: row;
+    }
+    @media (min-width: toRem(1060)) {
+        width: auto;
+    }
+}

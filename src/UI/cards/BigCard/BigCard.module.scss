@@ -1,0 +1,83 @@
+@use "@/scss/utils" as *;
+
+.big-card {
+    max-width: toRem(830);
+    max-height: toRem(475);
+    aspect-ratio: 830 / 475;
+    padding: toRem(60);
+    padding-top: toRem(40);
+    border-radius: toRem(16);
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: default;
+    overflow: hidden;
+    @include adaptiveValue(padding-top, 40, 20);
+    @include adaptiveValue(padding-bottom, 60, 30);
+    @include adaptiveValue(padding-left, 60, 30);
+    @include adaptiveValue(padding-right, 60, 30);
+    
+    @media (min-width: toRem(1024)) {
+        width: toRem(830);
+    }
+}
+
+.card-background {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: 0.8;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0) 38%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.upper {
+    position: relative;
+    z-index: 2;
+
+    &-title {
+        font-family: "Playfair Display ";
+        font-weight: 700;
+        line-height: 1.26;
+        margin-bottom: toRem(4);
+        @include adaptiveValue(font-size, 23, 16, $tabletScreenWidth)
+    }
+    &-subtitle {
+        font-weight: 400;
+        @include adaptiveValue(font-size, 16, 12, $tabletScreenWidth)
+    }
+}
+
+.lower {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &-text {
+        white-space: pre-line;
+        max-width: toRem(330);
+        font-weight: 500;
+        font-size: toRem(20);
+        line-height: 1.45;
+        @include adaptiveValue(font-size, 20, 14, $tabletScreenWidth);
+    }
+    &-link { 
+        cursor: pointer;
+        transition-property: transform, color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+
+        &:hover {
+            transform: translateY(toRem(-5)) scale(1.1);
+        }
+    }
+    
+}

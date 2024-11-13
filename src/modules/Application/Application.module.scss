@@ -1,0 +1,51 @@
+@use "@/scss/utils" as *;
+
+.application {
+    display: flex;
+    justify-content: flex-end;
+    background: url("@/assets/application/background.png"), #FAFAFA;
+    background-size: cover;
+
+    .container {
+        max-width: toRem(770);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px;
+        @include adaptiveValue(padding-top, 133, 50);
+        @include adaptiveValue(padding-bottom, 52, 20);
+        @include adaptiveValue(padding-right, 255, 15, $maxScreenWidth, $tabletScreenWidth);
+        
+        @media (min-width: toRem($mobileScreenWidth)) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (min-width: toRem($tabletScreenWidth)) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+
+    &-form { margin-top: toRem(17); }
+
+    &-content {
+        @media (max-width: toRem($tabletScreenWidth)) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &-title { 
+        max-width: toRem(403);
+        margin-bottom: toRem(30);
+        @media (max-width: toRem($tabletScreenWidth)) {
+            text-align: center;
+        }
+    }
+    &-subtitle { 
+        max-width: toRem(202); 
+        @media (max-width: toRem($tabletScreenWidth)) {
+            text-align: center;
+        }
+    }
+}
