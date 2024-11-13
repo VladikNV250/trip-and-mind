@@ -8,13 +8,13 @@
     position: relative;
 
     &__open {   
-        background: green;
+        background: #1C2A45;
         top: 0;
         left: 0;
         position: fixed;
         z-index: 6;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         @extend .burger-menu;
         opacity: 1;
         display: flex;

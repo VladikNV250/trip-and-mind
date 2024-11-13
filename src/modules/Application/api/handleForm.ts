@@ -1,22 +1,14 @@
-import { useTranslation } from "react-i18next";
 import getDataForm from "./getDataForm";
 import sendForm from "./sendForm";
-import { formData, ValidType } from "./types/formTypes";
+import { formData, submitProps, ValidType } from "./types/formTypes";
 import validateForm from "./validateForm";
 
-interface Props {
-    event: React.FormEvent<HTMLFormElement>,
-    onSuccess: () => void;
-    onError: (error: any) => void;
-}
-
-export default async function handleForm({event, onSuccess, onError}: Props) {
+export default async function handleForm({event, onSuccess, onError, translate}: submitProps) {
     event.preventDefault();
-    const { t } = useTranslation();
     const form = event.target as HTMLFormElement;
     const data: formData[] = getDataForm(form);
 
-    const {valid: isValid, target} = validateForm(data);
+    const {valid: isValid, target} = validateForm({data, translate});
 
     if (isValid) {
         await sendForm(data)
@@ -26,6 +18,6 @@ export default async function handleForm({event, onSuccess, onError}: Props) {
             })
             .catch((error) => onError(error as Error));
     } else {
-        onError(new Error(t("message-error_in_input") + target))
+        onError(new Error(translate("message-error_in_input") + target))
     }
 }

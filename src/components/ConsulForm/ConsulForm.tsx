@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 interface Props {
     className?: string;
     id?: string;
-    submit: ({event, onSuccess, onError}: submitProps) => void;
+    submit: ({event, onSuccess, onError, translate}: submitProps) => void;
 }
 
 export default function ConsulForm({submit, className, id}: Props) {
@@ -18,7 +18,7 @@ export default function ConsulForm({submit, className, id}: Props) {
     const agreementHref = "https://ombudsman.gov.ua/uk/zahist-personalnih-danih-faq"; 
 
     function onSuccess() { 
-      const message = t("form-success-message");
+      const message = t("message-success");
 
       setResponse({status: "success", message}); 
       setTimeout(() => {
@@ -36,7 +36,7 @@ export default function ConsulForm({submit, className, id}: Props) {
     <>
     <Message response={response} />
     <form 
-      onSubmit={(event) => submit({event, onSuccess, onError})} 
+      onSubmit={(event) => submit({event, onSuccess, onError, translate: t})} 
       id={id} 
       className={`${classes.form} ${className}`}
     >
