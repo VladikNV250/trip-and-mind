@@ -1,9 +1,15 @@
 @use "sass:color";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+$font: "Montserrat";
 $primary-color: #DD9428;
 $text-color: #331111;
 $maxScreenWidth: 1920;
 $mobileScreenWidth: 320;
 $tabletScreenWidth: 768;
+
 
 @function toRem($px) {
     @return calc($px / 16) + rem,
@@ -23,25 +29,6 @@ $tabletScreenWidth: 768;
         $blue: $adjust 
     ); 
 }
-
-// @mixin adaptiveValue($property, $startSize, $minSize, $type, $maxWidthContainer) {
-//     $addSize: $startSize - $minSize;
-//     @if type == 1 {
-//         // if less than container
-//         #{$property}: toRem($startSize);
-//         @media (max-width: #{toRem($maxWidthContainer)}) {
-//             #{$property}: calc(#{toRem($minSize)} + #{$addSize} * ((#{100vw - $mobileScreenWidth}) / ($maxWidthContainer - $mobileScreenWidth)))
-//         }
-//     } @else if type == 2 {
-//         // if bigger than container
-//         #{$property}: toRem($startSize);
-//         @media (max-width: #{toRem($maxWidthContainer)}) {
-//             #{$property}: calc(#{toRem($minSize)} + #{$addSize} * ((#{100vw - $mobileScreenWidth}) / ($maxScreenWidth - $mobileScreenWidth)))
-//         }
-//     } @else {
-//         #{$property}: calc(#{toRem($minSize)} + #{$addSize} * ((#{100vw - $mobileScreenWidth}) / ($maxScreenWidth - $mobileScreenWidth)))
-//     }
-// }
 
 @mixin nest-to-avoid-collision {
     & {
